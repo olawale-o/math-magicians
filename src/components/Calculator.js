@@ -40,7 +40,7 @@ class Calculator extends React.Component {
           <Button cssClass="btn" text="AC" handleCalc={this.calc} />
           <Button cssClass="btn" text="+/-" handleCalc={this.calc} />
           <Button cssClass="btn" text="%" handleCalc={this.calc} />
-          <Button cssClass="btn btn-orange" text="+" handleCalc={this.calc} />
+          <Button cssClass="btn btn-orange" text="÷" handleCalc={this.calc} />
           <Button cssClass="btn" text="7" handleCalc={this.calc} />
           <Button cssClass="btn" text="8" handleCalc={this.calc} />
           <Button cssClass="btn" text="9" handleCalc={this.calc} />
