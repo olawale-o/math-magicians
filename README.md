@@ -15,13 +15,19 @@
 - Remember to change `(copied link)` to `git@github.com:olawale-o/math-magicians.git` which is the name of the repository
 
 # Install
-```npm install``
+```bash
+npm install
+```
 
 # Usage
-```npm start``
+```bash
+npm start
+```
 
 # Run tests
-```npm test```
+```bash
+npm test
+```
 
 
 👤 **Omoogun Olawale**
