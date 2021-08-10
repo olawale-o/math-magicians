@@ -1,47 +1,61 @@
 import React from 'react';
+import calculate from '../logic/calculate';
+import Input from './Input';
+import Button from './Button';
 
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      input: 0,
+      total: null,
+      next: null,
+      operation: null,
     };
-    this.handleOnChange = this.handleOnChange.bind(this);
+    this.calc = this.calc.bind(this);
   }
 
-  handleOnChange(event) {
-    this.setState({
-      input: event.target.value,
-    });
+  calc(event) {
+    this.setState((prevState) => calculate(prevState, event.target.textContent));
   }
 
   render() {
-    const { input } = this.state;
+    const { total, next, operation } = this.state;
+    const keyedInput = () => {
+      if (!next && !operation) {
+        return total || '0';
+      }
+      if (total && next && operation) {
+        return next;
+      }
+      if (!total || !operation) {
+        return next;
+      }
+      return total || '0';
+    };
+
     return (
       <div className="calculator">
-        <div className="field">
-          <input className="input" value={input} onChange={() => this.handleOnChange} disabled />
-        </div>
+        <Input inputValue={keyedInput() || '0'} />
         <div className="buttons-grid">
-          <button type="button" className="btn">AC</button>
-          <button type="button" className="btn">+/-</button>
-          <button type="button" className="btn">%</button>
-          <button type="button" className="btn btn-orange">÷</button>
-          <button type="button" className="btn">7</button>
-          <button type="button" className="btn">8</button>
-          <button type="button" className="btn">9</button>
-          <button type="button" className="btn btn-orange">x</button>
-          <button type="button" className="btn">4</button>
-          <button type="button" className="btn">5</button>
-          <button type="button" className="btn">6</button>
-          <button type="button" className="btn btn-orange">-</button>
-          <button type="button" className="btn">1</button>
-          <button type="button" className="btn">2</button>
-          <button type="button" className="btn">3</button>
-          <button type="button" className="btn btn-orange">+</button>
-          <button type="button" className="btn span-2">0</button>
-          <button type="button" className="btn">.</button>
-          <button type="button" className="btn btn-orange">=</button>
+          <Button cssClass="btn" text="AC" handleCalc={this.calc} />
+          <Button cssClass="btn" text="+/-" handleCalc={this.calc} />
+          <Button cssClass="btn" text="%" handleCalc={this.calc} />
+          <Button cssClass="btn btn-orange" text="÷" handleCalc={this.calc} />
+          <Button cssClass="btn" text="7" handleCalc={this.calc} />
+          <Button cssClass="btn" text="8" handleCalc={this.calc} />
+          <Button cssClass="btn" text="9" handleCalc={this.calc} />
+          <Button cssClass="btn btn-orange" text="x" handleCalc={this.calc} />
+          <Button cssClass="btn" text="4" handleCalc={this.calc} />
+          <Button cssClass="btn" text="5" handleCalc={this.calc} />
+          <Button cssClass="btn" text="6" handleCalc={this.calc} />
+          <Button cssClass="btn btn-orange" text="-" handleCalc={this.calc} />
+          <Button cssClass="btn" text="1" handleCalc={this.calc} />
+          <Button cssClass="btn" text="2" handleCalc={this.calc} />
+          <Button cssClass="btn" text="3" handleCalc={this.calc} />
+          <Button cssClass="btn btn-orange" text="+" handleCalc={this.calc} />
+          <Button cssClass="btn span-2" text="0" handleCalc={this.calc} />
+          <Button cssClass="btn" text="." handleCalc={this.calc} />
+          <Button cssClass="btn btn-orange" text="=" handleCalc={this.calc} />
         </div>
       </div>
     );
