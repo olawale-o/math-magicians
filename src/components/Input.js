@@ -1,25 +1,20 @@
-import { Component } from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-class Input extends Component {
-  constructor(props) {
-    super(props);
-    this.handleOnChange = this.handleOnChange.bind(this);
+const Input = ({ inputValue }) => {
+  const [input, setInput] = useState('');
+
+  const handleOnChange = (event) => {
+    setInput(event.target.value);
   }
 
-  handleOnChange() {
-    this.setState({});
-  }
-
-  render() {
-    const { inputValue } = this.props;
-    return (
-      <div className="field">
-        <input className="input" value={inputValue} onChange={() => this.handleOnChange} disabled />
-      </div>
-    );
-  }
+  return (
+    <div className="field">
+      <input className="input" value={inputValue} onChange={() => handleOnChange()} disabled />
+    </div>
+  );
 }
+
 
 export default Input;
 
