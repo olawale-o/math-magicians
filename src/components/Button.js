@@ -1,19 +1,13 @@
-import { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Button extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    const { cssClass, handleCalc, text } = this.props;
-    return (
-      <button type="button" className={cssClass} onClick={handleCalc}>{text}</button>
-    );
-  }
-}
+const Button = ({ cssClass, handleCalc, text }) => {
+  const handle = (event) => {
+    handleCalc(event);
+  };
+  return (
+    <button type="button" className={cssClass} onClick={handle}>{text}</button>
+  );
+};
 
 export default Button;
 
