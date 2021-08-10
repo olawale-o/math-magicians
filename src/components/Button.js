@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 
 const Button = ({ cssClass, handleCalc, text }) => {
+  const handle = (event) => {
+    handleCalc(event);
+  };
   return (
-    <button type="button" className={cssClass} onClick={handleCalc}>{text}</button>
+    <button type="button" className={cssClass} onClick={handle}>{text}</button>
   );
-}
+};
 
 export default Button;
 
