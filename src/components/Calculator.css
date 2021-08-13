@@ -1,3 +1,9 @@
 .calculator {
-  width: 35%;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+h4 {
+  font-size: 3.5rem;
 }
