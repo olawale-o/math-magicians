@@ -7,20 +7,23 @@ const Header = () => {
     {
       id: 1,
       name: 'Home',
+      link: '/',
     },
     {
       id: 2,
       name: 'Calculator',
+      link: '/calculator',
     },
     {
       id: 3,
       name: 'Quote',
+      link: '/quote',
     },
   ];
   const tabs = links.map(({
-    id, name,
+    id, name, link,
   }) => (
-    <NavLink id={id} name={name} key={id} />
+    <NavLink id={id} name={name} link={link} key={id} />
   ));
   return (
     <header className="header">
