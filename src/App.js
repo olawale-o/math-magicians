@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Calculator from './components/Calculator';
+import Header from './components/Header';
 
-const App = () => <div className="App"><Calculator /></div>;
+const App = () => <div className="App"><Header /></div>;
 
 export default App;
