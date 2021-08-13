@@ -1,12 +1,13 @@
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const NavLink = ({
-  id, name,
+  id, name, link,
 }) => (
   <li key={id} className="nav-item">
-    <a href="/#" role="button" className="nav-link">
+    <Link to={link} role="button" className="nav-link">
       {name}
-    </a>
+    </Link>
   </li>
 );
 
@@ -15,4 +16,5 @@ export default NavLink;
 NavLink.propTypes = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
 };
