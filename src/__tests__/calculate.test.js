@@ -237,6 +237,39 @@ describe('Calculate', () => {
       const result = calculate(obj, buttonName);
       expect(result).toEqual({ total: '-4', next: null, operation: null });
     });
+
+    test('result should equal {} when obj = {total: "8" next: null, operation: "+"} and buttonName is =', () => {
+      const obj = {
+        total: '8',
+        next: null,
+        operation: '+',
+      };
+      const buttonName = '=';
+      const result = calculate(obj, buttonName);
+      expect(result).toEqual({});
+    });
+  });
+
+  describe('Zero Division', () => {
+    test('4 ÷ 0 should throw error', () => {
+      const obj = {
+        total: '4',
+        next: '0',
+        operation: '÷',
+      };
+      const buttonName = '=';
+      expect(() => calculate(obj, buttonName)).toThrow('[big.js] Division by zero');
+    });
+
+    test('4 % 0 should throw error', () => {
+      const obj = {
+        total: '4',
+        next: '0',
+        operation: '%',
+      };
+      const buttonName = '=';
+      expect(() => calculate(obj, buttonName)).toThrow('[big.js] Division by zero');
+    });
   });
 
   describe('Others', () => {
