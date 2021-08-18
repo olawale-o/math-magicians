@@ -36,6 +36,10 @@ npm test
 * Twitter: [@twitterhandle](https://twitter.com/ibreaktherules)
 * LinkedIn: [LinkedIn](https://www.linkedin.com/in/olawale-omoogun-330a051b1/)
 
+👤 Mohammed Al-Asfar
+
+- GitHub: [@githubhandle](https://github.com/elasfarc)
+
 # Contributing
 Contributions, issues, and feature requests are welcome!
 
