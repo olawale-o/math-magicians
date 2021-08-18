@@ -9,7 +9,7 @@ const quoteStyle = {
 };
 const Quote = () => (
   <div className="Quote">
-    <p style={quoteStyle}>
+    <p style={quoteStyle} data-testid="quote">
       Mathematics is not about numbers, equations, computations
       <br />
       or algorithms: it is about understanding. -William Paul Thurston
