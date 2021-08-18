@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Renders Quote component correctly and create snapshot 1`] = `
+<div
+  className="Quote"
+>
+  <p
+    data-testid="quote"
+    style={
+      Object {
+        "fontSize": "3.5rem",
+        "fontWeight": "light",
+        "margin": "10rem auto",
+        "width": "85%",
+      }
+    }
+  >
+    Mathematics is not about numbers, equations, computations
+    <br />
+    or algorithms: it is about understanding. -William Paul Thurston
+  </p>
+</div>
+`;
