@@ -14,6 +14,8 @@
 - Type `git clone (copied link)` on the currently opened terminal or command prompt
 - Remember to change `(copied link)` to `git@github.com:olawale-o/math-magicians.git` which is the name of the repository
 
+# Demo Link
+[Link](https://reactmathmagicians.herokuapp.com/)
 # Install
 ```bash
 npm install
