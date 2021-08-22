@@ -15,7 +15,11 @@
 - Remember to change `(copied link)` to `git@github.com:olawale-o/math-magicians.git` which is the name of the repository
 
 # Demo Link
+<img alt="HEROKU" src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" /> <br />
 [Link](https://reactmathmagicians.herokuapp.com/)
+
+<img alt="NETLIFY" src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" /> <br />
+[Link](https://happy-booth-b9cb9c.netlify.app)
 # Install
 ```bash
 npm install
