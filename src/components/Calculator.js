@@ -12,8 +12,12 @@ const Calculator = () => {
   });
 
   const calc = (event) => {
-    const result = calculate(state, event.target.textContent);
-    setState({ ...state, ...result });
+    try {
+      const result = calculate(state, event.target.textContent);
+      setState({ ...state, ...result });
+    } catch (e) {
+      setState({ total: 'nan', operation: null, next: null });
+    }
   };
 
   const { total, next, operation } = state;
